@@ -40,12 +40,12 @@ class Home extends Component {
         return (
             <div className="container">
                 <h3> Welcome, {this.props.match.params.username} </h3>
-                <button onClick={this.handleLogout}> Logout </button>
-                <button onClick={this.handleDisplayAllUser}> Display All Users </button>
+                <button className="btn btn-primary" onClick={this.handleLogout}> Logout </button> &nbsp;
+                <button className="btn btn-primary" onClick={this.handleDisplayAllUser}> Display All Users </button>
 
                 {
                     this.props.items &&
-                    <div>
+                    <div style={{ marginTop: 20}}>
                         <h3>User List</h3>
                         <table className="table table-striped" style={{ marginTop: 20, padding: 10, textAlign:"center" }} >
                             <thead>

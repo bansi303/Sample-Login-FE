@@ -40,7 +40,7 @@ class Login extends Component {
     render() {
         const { username, password, submitted } = this.state;
         return (
-            <div className="">
+            <div className="container">
                 <div className="alert alert-info">
                     Valid credentials: <b> (test1, test1) </b> | <b> (test2, test2) </b> | <b> (test3, test3) </b>
                 </div>
@@ -66,7 +66,7 @@ class Login extends Component {
                 </form>
                 {
                     this.props.error && 
-                    <h2> { this.props.error.response.data.message } </h2>
+                    <h1> { this.props.error.response.data.message } </h1>
                 }
             </div>
         )
