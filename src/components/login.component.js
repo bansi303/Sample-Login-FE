@@ -65,8 +65,9 @@ class Login extends Component {
                     </div>
                 </form>
                 {
-                    this.props.error && 
-                    <h1> { this.props.error.response.data.message } </h1>
+                    this.props.error &&
+                    (this.props.error.message !== 'Network Error' ? <h1> { this.props.error.response.data.message } </h1> :
+                    <h1> You are not connected to server  </h1>)
                 }
             </div>
         )
